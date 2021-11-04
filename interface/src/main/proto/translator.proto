@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "lib";
+option java_outer_classname = "TranslatorProto";
+
+service Translator {
+    rpc translation (TranslationRequest) returns (TranslationResponse) {}
+}
+
+message TranslationRequest {
+	string langFrom = 1;
+	string langTo = 2;
+	string input = 3;
+}
+
+message TranslationResponse {
+    string translation = 1;
+}

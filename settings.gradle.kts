@@ -1,3 +1,2 @@
-rootProject.name = "lab2"
-
-include("server", "client")
+rootProject.name = "lab2grpc"
+include ("interface","server","client")
